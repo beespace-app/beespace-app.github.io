@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeeSpace — Beekeeping App for iPhone &amp; Android</title>
+  <meta name="description" content="BeeSpace tracks your hives, inspections, queens and honey harvests, with HiveMind, an AI beekeeping assistant. Free on iPhone and Android." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #FAFAF8; color: #1a1a1a; line-height: 1.6; }
+    header { background: #fff; border-bottom: 1px solid #E5E5E5; padding: 40px 24px 32px; text-align: center; }
+    header img { max-width: 300px; width: 85%; height: auto; display: block; margin: 0 auto 12px; }
+    h1 { font-size: 1.7rem; line-height: 1.25; margin: 8px auto 8px; max-width: 520px; }
+    .tag { color: #666; font-size: 1.05rem; max-width: 520px; margin: 0 auto; }
+    .stores { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: center; align-items: center; margin-top: 24px; }
+    .badge { display: inline-block; line-height: 0; }
+    header .badge img { display: block; margin: 0; max-width: none; width: auto; }
+    header #ios img { height: 60px; width: auto; }
+    header #android img { height: 60px; width: auto; }
+    .badge.first { order: -1; }
+    .btn { display: inline-block; background: #C9921A; color: #fff; text-decoration: none; font-weight: 700; padding: 14px 26px; border-radius: 12px; font-size: 1rem; min-width: 210px; text-align: center; }
+    .btn.alt { background: #1a1a1a; }
+    .btn.first { order: -1; }
+    section { max-width: 680px; margin: 0 auto; padding: 40px 24px; }
+    section + section { border-top: 1px solid #E5E5E5; }
+    h2 { font-size: 1.25rem; margin-bottom: 14px; }
+    ul { list-style: none; }
+    li { background: #fff; border: 1px solid #E5E5E5; border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; font-size: 0.97rem; color: #444; }
+    li strong { color: #1a1a1a; display: block; }
+    .price { font-size: 0.97rem; color: #444; }
+    .fine { font-size: 0.82rem; color: #888; margin-top: 10px; }
+    footer { background: #1a1a1a; color: #888; text-align: center; padding: 28px 24px; font-size: 0.85rem; }
+    footer a { color: #C9921A; text-decoration: none; margin: 0 8px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../beespace-logo.png" alt="BeeSpace" />
+    <h1>Hive tracking and an AI beekeeping assistant, built by a beekeeper</h1>
+    <p class="tag">Track every hive, inspection, queen and harvest in your pocket. Ask HiveMind your beekeeping questions anytime.</p>
+    <div class="stores">
+      <a id="ios" class="badge" href="https://apps.apple.com/app/id6764474893"><img src="app-store-badge.svg" alt="Download on the App Store" height="64" /></a>
+      <a id="android" class="badge" href="https://play.google.com/store/apps/details?id=com.hivementalityhoney.beespace"><img src="google-play-badge.png" alt="Get it on Google Play" height="64" /></a>
+    </div>
+  </header>
+
+  <section>
+    <h2>What you get</h2>
+    <ul>
+      <li><strong>HiveMind AI assistant</strong>Ask about mites, queens, feeding, splits and more.</li>
+      <li><strong>Inspections made simple</strong>Tag frames box by box and keep a full history for every hive.</li>
+      <li><strong>Queen and treatment tracking</strong>Queen age and marking, mite treatments, and queen cell timelines.</li>
+      <li><strong>Reminders</strong>Never miss a treatment, feeding or follow-up inspection.</li>
+      <li><strong>Trends and harvests</strong>See brood, food stores, mite levels and honey harvested across your season.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Free to start. Upgrade when you need more.</h2>
+    <p class="price">BeeSpace Pro unlocks unlimited apiaries and hives, full inspection history, and 10 HiveMind chats or AI photo scans per month.</p>
+    <p class="price"><strong>$19.99 per year</strong> or <strong>$1.99 per month</strong>. Cancel anytime in your App Store or Google Play settings.</p>
+    <p class="fine">HiveMind and AI photo scans offer guidance and can be wrong. Confirm treatment decisions with a reputable source or your state apiarist.</p>
+  </section>
+
+  <footer>
+    <div><a href="/beespace-legal/privacy/">Privacy</a><a href="/beespace-legal/terms/">Terms</a><a href="/">Hive Mentality Honey</a></div>
+    <div style="margin-top:10px">© 2026 Hive Mentality Honey LLC. All rights reserved.</div>
+  </footer>
+
+<script>
+  // Put the store that matches the visitor's phone first.
+  var ua = navigator.userAgent || '';
+  if (/Android/i.test(ua)) document.getElementById('android').classList.add('first');
+  else document.getElementById('ios').classList.add('first');
+
+  // Pass ad-campaign info to Google Play so installs show up in Play Console's acquisition reports.
+  var q = new URLSearchParams(location.search);
+  var src = q.get('utm_source') || 'meta';
+  var camp = q.get('utm_campaign') || 'direct';
+  var ref = encodeURIComponent('utm_source=' + src + '&utm_medium=paid&utm_campaign=' + camp);
+  var a = document.getElementById('android');
+  a.href = a.href + '&referrer=' + ref;
+</script>
+</body>
+</html>
