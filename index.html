@@ -5,188 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="f7PTAxkG7eJ7teq_evFvKmLwBlR9hkx0sHIBIBBHYQE" />
   <title>Hive Mentality Honey</title>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #FAFAF8;
-      color: #1a1a1a;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #E5E5E5;
-      padding: 48px 24px 36px;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 340px;
-      width: 90%;
-      height: auto;
-      display: block;
-      margin: 0 auto 16px;
-    }
-
-    header p {
-      margin-top: 0;
-      font-size: 1rem;
-      color: #888;
-    }
-
-    section {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-
-    section + section {
-      border-top: 1px solid #E5E5E5;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-      color: #1a1a1a;
-    }
-
-    p {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 12px;
-    }
-
-    .app-card {
-      background: #fff;
-      border: 1px solid #E5E5E5;
-      border-radius: 14px;
-      padding: 24px;
-      margin-top: 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .app-icon {
-      width: 200px;
-      height: auto;
-      flex-shrink: 0;
-      display: block;
-    }
-
-    .app-card h3 {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .app-card p {
-      font-size: 0.9rem;
-      color: #666;
-      margin: 0;
-    }
-
-    .store-badges {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px 28px;
-      margin-top: 16px;
-    }
-
-    .store-badges a { display: inline-block; line-height: 0; }
-    .store-badges img { height: 36px; width: auto; display: block; }
-
-    .contact-link {
-      color: #C9921A;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background: #1a1a1a;
-      color: #888;
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: #C9921A;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    footer .divider {
-      margin: 12px 0;
-    }
-  </style>
+  <link rel="stylesheet" href="/site.css" />
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="Hive Mentality Honey" />
-    <p>Small-batch beekeeping from Charlotte, NC</p>
-  </header>
+  <div class="nav big"><div class="nav-in">
+    <a href="/"><img src="logo.png" alt="Hive Mentality Honey" /></a>
+  </div></div>
 
-  <section>
-    <h2>About Us</h2>
-    <p>
-      Hive Mentality Honey is a small beekeeping operation based in Charlotte, North Carolina.
-      We are passionate about sustainable beekeeping, healthy hive management, and sharing
-      the craft with fellow beekeepers.
-    </p>
-    <p>
-      Founded by experienced beekeepers with over a decade in the field, we raise honeybees
-      with care and respect for the colony — following best practices for hive health,
-      mite management, and seasonal stewardship.
-    </p>
-  </section>
+  <section class="hero"><div class="hero-in">
+    <h1>Small-batch beekeeping from Charlotte, NC</h1>
+    <p>Sustainable beekeeping, healthy hive management, and tools that help fellow beekeepers.</p>
+    <div class="btns">
+      <a class="pill" href="#app">Our BeeSpace app</a>
+      <a class="pill light" href="#contact">Contact us</a>
+    </div>
+  </div></section>
 
-  <section>
-    <h2>Our App</h2>
-    <p>We build tools to help beekeepers manage their hives more effectively.</p>
-    <div class="app-card">
-      <img class="app-icon" src="beespace-logo.png" alt="BeeSpace" />
+  <div class="cards">
+
+    <div class="card" id="about">
+      <h2>About Us</h2>
+      <p>
+        Hive Mentality Honey is a small beekeeping operation based in Charlotte, North Carolina.
+        We are passionate about sustainable beekeeping, healthy hive management, and sharing
+        the craft with fellow beekeepers.
+      </p>
+      <p>
+        Founded by experienced beekeepers with over a decade in the field, we raise honeybees
+        with care and respect for the colony — following best practices for hive health,
+        mite management, and seasonal stewardship.
+      </p>
+    </div>
+
+    <div class="card app-card" id="app">
+      <img class="app-logo" src="beespace-logo.png" alt="BeeSpace" />
       <div>
-        <h3>BeeSpace — Hive Management</h3>
+        <h2>BeeSpace — Hive Management</h2>
+        <p>We build tools to help beekeepers manage their hives more effectively.</p>
         <p>
           A hive inspection and management app for backyard and hobbyist beekeepers.
           Track inspections, monitor mite counts, log feedings, and manage your apiary
           from your phone.
         </p>
-        <div class="store-badges">
-          <a href="https://apps.apple.com/app/id6764474893"><img src="get-beespace/app-store-badge.svg" alt="Download on the App Store" /></a>
-          <a href="https://play.google.com/store/apps/details?id=com.hivementalityhoney.beespace&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage"><img src="get-beespace/google-play-badge.png" alt="Get it on Google Play" /></a>
+        <div class="stores">
+          <a class="badge" href="https://apps.apple.com/app/id6764474893"><img src="get-beespace/app-store-badge.svg" alt="Download on the App Store" /></a>
+          <a class="badge" href="https://play.google.com/store/apps/details?id=com.hivementalityhoney.beespace&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhomepage"><img src="get-beespace/google-play-badge.png" alt="Get it on Google Play" /></a>
         </div>
+        <a class="pill soft" href="/get-beespace/">See what BeeSpace can do</a>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      For questions about BeeSpace or general inquiries, reach us at:<br />
-      <a class="contact-link" href="mailto:admin@hivementalityhoney.com">admin@hivementalityhoney.com</a>
-    </p>
-  </section>
+    <div class="card" id="contact">
+      <h2>Contact</h2>
+      <p>
+        For questions about BeeSpace or general inquiries, reach us at:<br />
+        <a class="contact-link" href="mailto:admin@hivementalityhoney.com">admin@hivementalityhoney.com</a>
+      </p>
+    </div>
+
+  </div>
 
   <footer>
     <div>
-      <a href="/beespace-legal/">Legal</a>
+      <a href="/beespace-legal/privacy/">Privacy</a><a href="/beespace-legal/terms/">Terms</a><a href="/beespace-legal/data-deletion/">Data deletion</a><a href="/beespace-legal/">Legal</a>
     </div>
-    <div class="divider">© 2026 Hive Mentality Honey LLC. All rights reserved.</div>
+    <div style="margin-top:10px">&copy; 2026 Hive Mentality Honey LLC. All rights reserved.</div>
   </footer>
 
 </body>
