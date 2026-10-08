@@ -29,8 +29,8 @@
     li strong { color: #1a1a1a; display: block; }
     .price { font-size: 0.97rem; color: #444; }
     .fine { font-size: 0.82rem; color: #888; margin-top: 10px; }
-    .shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; }
-    .shot { flex: 0 0 auto; width: 210px; scroll-snap-align: start; text-align: center; }
+    .shots { display: flex; gap: 14px; max-width: 680px; margin: 26px auto 0; text-align: center; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 14px; -webkit-overflow-scrolling: touch; }
+    .shot { flex: 0 0 auto; width: 180px; scroll-snap-align: start; text-align: center; }
     .shot img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid #E5E5E5; box-shadow: 0 4px 14px rgba(0,0,0,0.08); }
     .shot span { display: block; margin-top: 8px; font-size: 0.85rem; color: #666; }
     footer { background: #1a1a1a; color: #888; text-align: center; padding: 28px 24px; font-size: 0.85rem; }
@@ -43,6 +43,14 @@
     <img src="../beespace-logo.png" alt="BeeSpace" />
     <h1>Hive tracking and an AI beekeeping assistant, built by a beekeeper</h1>
     <p class="tag">Track every hive, inspection, queen and harvest in your pocket. Ask HiveMind your beekeeping questions anytime.</p>
+    <div class="shots">
+      <div class="shot"><img src="shots/hivemind.jpg" alt="HiveMind AI chat screen" loading="lazy" /><span>Ask HiveMind</span></div>
+      <div class="shot"><img src="shots/inspection.jpg" alt="Frame-by-frame inspection screen" loading="lazy" /><span>Inspect frame by frame</span></div>
+      <div class="shot"><img src="shots/queen.jpg" alt="Queen details screen" loading="lazy" /><span>Track every queen</span></div>
+      <div class="shot"><img src="shots/reminders.jpg" alt="Reminders screen" loading="lazy" /><span>Stay on schedule</span></div>
+      <div class="shot"><img src="shots/health.jpg" alt="Hive health screen" loading="lazy" /><span>Hive health</span></div>
+      <div class="shot"><img src="shots/trends.jpg" alt="Trends chart screen" loading="lazy" /><span>Season trends</span></div>
+    </div>
     <div class="stores">
       <a id="ios" class="badge" href="https://apps.apple.com/app/id6764474893"><img src="app-store-badge.svg" alt="Download on the App Store" height="64" /></a>
       <a id="android" class="badge" href="https://play.google.com/store/apps/details?id=com.hivementalityhoney.beespace"><img src="google-play-badge.png" alt="Get it on Google Play" height="64" /></a>
@@ -58,18 +66,6 @@
       <li><strong>Reminders</strong>Never miss a treatment, feeding or follow-up inspection.</li>
       <li><strong>Trends and harvests</strong>See brood, food stores, mite levels and honey harvested across your season.</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>See it in action</h2>
-    <div class="shots">
-      <div class="shot"><img src="shots/hivemind.jpg" alt="HiveMind AI chat screen" loading="lazy" /><span>Ask HiveMind</span></div>
-      <div class="shot"><img src="shots/inspection.jpg" alt="Frame-by-frame inspection screen" loading="lazy" /><span>Inspect frame by frame</span></div>
-      <div class="shot"><img src="shots/queen.jpg" alt="Queen details screen" loading="lazy" /><span>Track every queen</span></div>
-      <div class="shot"><img src="shots/reminders.jpg" alt="Reminders screen" loading="lazy" /><span>Stay on schedule</span></div>
-      <div class="shot"><img src="shots/health.jpg" alt="Hive health screen" loading="lazy" /><span>Hive health</span></div>
-      <div class="shot"><img src="shots/trends.jpg" alt="Trends chart screen" loading="lazy" /><span>Season trends</span></div>
-    </div>
   </section>
 
   <section>
